@@ -1,56 +1,64 @@
-# Welcome to your Expo app 👋
+# EdgeGPT
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Private, on-device AI for your phone.
 
-## Get started
+EdgeGPT is an Expo React Native app being built to let people download and run large language models directly on their device. The goal is a useful AI assistant that continues to work without an internet connection and keeps conversations and inference local.
 
-1. Install dependencies
+## Vision
 
-   ```bash
-   npm install
-   ```
+- **Offline by default** — use downloaded models without a network connection.
+- **Private by design** — keep prompts and inference on the device.
+- **Bring your own model** — download and manage supported local LLMs.
+- **Fast on-device inference** — planned integration with [ExecuTorch](https://pytorch.org/executorch/).
 
-2. Start the app
+## Status
 
-   ```bash
-   npx expo start
-   ```
+Early development. The current repository contains the Expo application foundation; local model downloading and ExecuTorch-powered inference are planned next.
 
-In the output, you'll find options to open the app in a
+## Tech stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- [Expo](https://expo.dev/) and React Native
+- TypeScript
+- Expo Router
+- ExecuTorch *(planned)*
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Getting started
 
-## Get a fresh project
+### Prerequisites
 
-When you're ready, run:
+- Node.js (LTS recommended)
+- npm
+- Expo Go or an Android/iOS simulator for development
+
+### Install and run
 
 ```bash
-npm run reset-project
+git clone https://github.com/mrkishorekumar/edgegpt.git
+cd edgegpt
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+From the Expo terminal, choose an Android emulator, iOS simulator, web browser, or scan the QR code with Expo Go.
 
-### Other setup steps
+## Scripts
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npm run start    # Start the Expo development server
+npm run android  # Open on Android
+npm run ios      # Open on iOS
+npm run web      # Open in a browser
+npm run lint     # Run Expo linting
+```
 
-## Learn more
+## Roadmap
 
-To learn more about developing your project with Expo, look at the following resources:
+- [ ] Design the local model library and download flow
+- [ ] Add model storage, management, and deletion controls
+- [ ] Integrate ExecuTorch for on-device LLM inference
+- [ ] Build an offline chat interface
+- [ ] Add model and device performance information
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## License
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the [MIT License](LICENSE).
